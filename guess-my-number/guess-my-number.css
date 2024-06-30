@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0; 
+    box-sizing: inherit;
+
+}
+
+html {
+    font-size: 60%;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #051937, #373762, #6d558c, #a975b4, #eb96d8);
+    font-family: 'Montserrat', sans-serif;
+    color: #eee;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-right {
+    font-size: 1.5rem;
+    margin: .7rem;
+}
+
+.header-left {
+    font-size: 4rem;
+    padding: .1rem 3rem 1.1rem;  
+}
+
+h1 {
+    font-size: 5.5rem;
+    padding: 2rem 2rem 12rem;
+    text-align: center;
+    color: #eee;
+    border-bottom: .6rem #eee solid;
+    margin-top: 12rem;
+    text-shadow: .1rem .2rem #051937;
+}
+
+button {
+    margin: 1rem;
+    padding: 2rem 4rem;
+    border: .2rem solid #eee;
+    border-radius: 10rem;
+    background-color:#eee;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #373762;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background: none;
+    color: #eee;
+}
+
+.answer:hover{
+    background-color: #eee;
+    color: #373762;
+}
+
+.answer {
+    padding: 2.5rem 5rem;
+    font-size: 8rem;
+    cursor: none;
+    color: #373762;
+    border-radius: 50%;
+}
+
+.guess-number {
+    display: flex;
+    justify-content: center;
+    margin-top: -9em;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15rem;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.guess {
+    background: none;
+    height: 10rem;
+    width: 25rem;
+    border: #eee .4rem solid;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    color:#eee;
+    text-align: center;
+    border-radius: 10rem;
+}
+
+.container-right{
+    font-size: 2rem;
+}
+
+.first-line {
+    margin-bottom: 4rem;
+}
+
+canvas#confetti {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    pointer-events: none;
+}

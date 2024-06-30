@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(/to-do-list/images/background.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*__*___________App container___________*__*/
+.to-do-app {
+    background: rgba(255, 255, 255, .5);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(.5rem);
+    border: #002765 solid .1rem;
+    color: #002765;
+}
+/*__*___________input + button'Add'___________*__*/
+.row {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 3rem;
+    padding-left: .5rem;
+    margin: 2rem 0;
+}
+
+input {
+    border: none;
+    outline: none;/*to remove the outline when we write in input*/
+    background: none;
+    padding: 1rem;
+}
+
+button {
+    border: none;
+    padding: 1rem 2.5rem;
+    background: #00A7B5;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 3rem;
+    font-weight: 500;
+}
+
+button:hover {
+    background: #F1B300;
+}
+/*__*___________List styling___________*__*/
+ul li {
+    list-style: none;
+    padding: 1rem 1rem 1rem 3rem;
+    user-select: none; /*user can't select with double click*/
+    cursor: pointer;
+    position: relative;
+    color: #000;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 1.7rem;
+    width: 1.7rem;
+    background-image: url(/to-do-list/images/unchecked.png);
+    background-size: cover;
+    top: .7rem;
+    left: .5rem;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(/to-do-list/images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: .8rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 2rem;
+    color: #C23561;
+    line-height: 1rem;
+}
+/*__*___________Filter buttons___________*__*/
+.filter {
+    background: none;
+    color: #002765;
+    border: #002765 solid .1rem;
+    margin-top: 1.5rem;
+}
+
+.filter:hover {
+    background: rgba(255, 255, 255, .7);
+}
+
+.filter.active {
+    background: rgba(255, 255, 255, .5);
+}
